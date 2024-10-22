@@ -51,10 +51,10 @@ export default function MapScreen() {
         }}
       >
         <UrlTile
-          urlTemplate={`https://{s}.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=${TOMTOM_API_KEY}`}
+          urlTemplate={`https://{s}.api.tomtom.com/map/1/tile/dark/main/{z}/{x}/{y}.png?key=${TOMTOM_API_KEY}`}
           maximumZ={19}
           tileSize={256}
-        />
+          />
       </MapView>
 
       <View style={styles.carSelection}>
