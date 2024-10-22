@@ -7,6 +7,7 @@ import NotificationsScreen from "./screens/NotificationsScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import MapScreen from "./screens/MapScreen";
 import CustomDrawerContent from "./CustomDrawerContent"; // Import the custom drawer content
+import WalletScreen from "./screens/WalletScreen";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -38,7 +39,7 @@ export default function App() {
         drawerContent={(props) => <CustomDrawerContent {...props} />}
       >
         <Drawer.Screen name="Ride" component={HomeStack} />
-        <Drawer.Screen name="Wallet" component={NotificationsScreen} />
+        <Drawer.Screen name="Wallet" component={WalletScreen} />
         <Drawer.Screen name="History" component={NotificationsScreen} />
         <Drawer.Screen name="Profile" component={ProfileScreen} />
       </Drawer.Navigator>
