@@ -1,6 +1,9 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+import React from "react";
+import { View, Text, Image, StyleSheet } from "react-native";
+import {
+  DrawerContentScrollView,
+  DrawerItemList,
+} from "@react-navigation/drawer";
 
 const CustomDrawerContent = (props) => {
   return (
@@ -20,17 +23,18 @@ const CustomDrawerContent = (props) => {
 const styles = StyleSheet.create({
   logoContainer: {
     padding: 20,
-    alignItems: 'center',
-    backgroundColor: '#ffff', // Optional: Change background color
+    alignItems: "center",
+    backgroundColor: "#ffff", // Optional: Change background color
   },
-//   logo: {
-//     width: 100, // Adjust the width of the logo
-//     height: 100, // Adjust the height of the logo
-//     resizeMode: 'contain', // Ensures the logo maintains its aspect ratio
-//   },
+  //   logo: {
+  //     width: 100, // Adjust the width of the logo
+  //     height: 100, // Adjust the height of the logo
+  //     resizeMode: 'contain', // Ensures the logo maintains its aspect ratio
+  //   },
   logoText: {
+    color: "#2eb000",
     fontSize: 42,
-    fontWeight: '700',
+    fontWeight: "700",
     marginTop: 10,
   },
 });
