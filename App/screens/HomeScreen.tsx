@@ -1,14 +1,17 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, Button, Pressable } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/Order.png")} style={styles.image} />
       <Text style={styles.welcome}>
         It's time to take <Text style={styles.green}>Ride</Text>
       </Text>
-      <Pressable style={styles.start}>
+      <Pressable
+        style={styles.start}
+        onPress={() => navigation.navigate("Map")}
+      >
         <Text style={styles.startText}>Let's Ride</Text>
       </Pressable>
       <StatusBar style="auto" />
@@ -44,8 +47,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#2eb000",
     alignSelf: "center",
     paddingVertical: 10,
-    paddingHorizontal: 70,
-    borderRadius: 12,
+    paddingHorizontal: 100,
+    borderRadius: 8,
     marginTop: 20,
   },
   startText: {
