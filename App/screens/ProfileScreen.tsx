@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button, View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { Button, View, Text, StyleSheet } from "react-native";
 
 const ProfileScreen = ({ navigation }) => {
   return (
@@ -13,12 +13,12 @@ const ProfileScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
-    fontSize: 24
-  }
+    fontSize: 24,
+  },
 });
 
 export default ProfileScreen;
