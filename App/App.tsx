@@ -11,12 +11,13 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator 
+          <Drawer.Navigator 
         initialRouteName="Home" 
         drawerContent={(props) => <CustomDrawerContent {...props} />} // Use custom drawer content
       >
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+        <Drawer.Screen name="Ride" component={HomeScreen} />
+        <Drawer.Screen name="Wallet" component={NotificationsScreen} />
+        <Drawer.Screen name="History" component={NotificationsScreen} />
         <Drawer.Screen name="Profile" component={ProfileScreen} />
       </Drawer.Navigator>
     </NavigationContainer>

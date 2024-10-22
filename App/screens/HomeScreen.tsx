@@ -5,9 +5,11 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/Order.png")} style={styles.image} />
-      <Text style={styles.welcome}>Welcome to Zippi</Text>
+      <Text style={styles.welcome}>
+        It's time to take <Text style={styles.green}>Ride</Text>
+      </Text>
       <Pressable style={styles.start}>
-        <Text style={styles.startText}>Lets Ride</Text>
+        <Text style={styles.startText}>Let's Ride</Text>
       </Pressable>
       <StatusBar style="auto" />
     </View>
@@ -15,7 +17,11 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    alignItems: "center",
+    textAlign: "center",
+    justifyContent: "center",
+  },
   welcome: {
     textAlign: "center",
     fontSize: 30,
@@ -30,6 +36,9 @@ const styles = StyleSheet.create({
     height: 400,
     padding: 20,
     marginVertical: 50,
+  },
+  green: {
+    color: "#2eb000",
   },
   start: {
     backgroundColor: "#2eb000",
