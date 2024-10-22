@@ -11,8 +11,8 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-          <Drawer.Navigator 
-        initialRouteName="Home" 
+      <Drawer.Navigator
+        initialRouteName="Home"
         drawerContent={(props) => <CustomDrawerContent {...props} />} // Use custom drawer content
       >
         <Drawer.Screen name="Ride" component={HomeScreen} />
