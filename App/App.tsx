@@ -4,12 +4,17 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from "./screens/HomeScreen";
 import NotificationsScreen from "./screens/NotificationsScreen";
 import ProfileScreen from "./screens/ProfileScreen";
+import CustomDrawerContent from "./CustomDrawerContent"; // Import the custom drawer content
+
 const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator
+        initialRouteName="Home"
+        drawerContent={(props) => <CustomDrawerContent {...props} />} // Use custom drawer content
+      >
         <Drawer.Screen name="Ride" component={HomeScreen} />
         <Drawer.Screen name="Wallet" component={NotificationsScreen} />
         <Drawer.Screen name="History" component={NotificationsScreen} />
