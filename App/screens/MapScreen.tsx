@@ -3,12 +3,7 @@ import { View, StyleSheet, Dimensions, Text, FlatList, TouchableOpacity } from "
 import MapView, { UrlTile } from "react-native-maps";
 import { TOMTOM_API_KEY } from '@env';
 import { LinearGradient } from 'expo-linear-gradient';
-
-const carOptions = [
-  { id: '1', type: 'Economy', price: '$10', eta: '5 min', image: '🚗' },
-  { id: '2', type: 'Standard', price: '$15', eta: '7 min', image: '🚕' },
-  { id: '3', type: 'Luxury', price: '$25', eta: '10 min', image: '🚙' },
-];
+import carOptions from '.././carOptions.json'; // Adjust the path to your JSON file
 
 export default function MapScreen() {
   const [selectedCar, setSelectedCar] = useState(null);
@@ -62,15 +57,17 @@ export default function MapScreen() {
         />
       </MapView>
 
-      {/* Car Selection Component */}
       <View style={styles.carSelection}>
-        <Text style={styles.selectionTitle}>Choose Ride</Text>
-        <FlatList
-          data={carOptions}
-          renderItem={renderCarItem}
-          keyExtractor={(item) => item.id}
-          showsVerticalScrollIndicator={false}
-        />
+        <Text style={styles.selectionTitle}>Categories</Text>
+        <View style={styles.flatListContainer}>
+          <FlatList
+            data={carOptions}
+            renderItem={renderCarItem}
+            keyExtractor={(item) => item.id}
+            showsVerticalScrollIndicator={false}
+            scrollEnabled={true}
+          />
+        </View>
       </View>
     </View>
   );
@@ -81,6 +78,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     justifyContent: "flex-end",
     alignItems: "center",
+    height: Dimensions.get("window").height,
   },
   map: {
     ...StyleSheet.absoluteFillObject,
@@ -89,19 +87,21 @@ const styles = StyleSheet.create({
   },
   carSelection: {
     position: 'absolute',
-    padding: 30,
-    borderRadius: 15,
-    width: '100%',
+    bottom: 100, // Adjust as necessary
+    padding: 20,
+    borderRadius: 5,
+    width: '100%', // Width of the selection box
     alignSelf: 'center',
     elevation: 5,
     backgroundColor: '#fff',
+  },
+  flatListContainer: {
+    maxHeight: 270, // Set a maximum height for the FlatList to make it scrollable
   },
   carOption: {
     marginBottom: 10, // Change margin to bottom for vertical spacing
     borderRadius: 20,
     alignItems: 'center',
-  },
-  selectedCar: {
   },
   gradient: {
     padding: 10,

@@ -1,0 +1,8 @@
+[
+    { "id": "1", "type": "Economy", "price": "$10", "eta": "5 min", "image": "🚗" },
+    { "id": "2", "type": "Standard", "price": "$15", "eta": "7 min", "image": "🚕" },
+    { "id": "3", "type": "Luxury", "price": "$25", "eta": "10 min", "image": "🚙" },
+    { "id": "4", "type": "SUV", "price": "$30", "eta": "12 min", "image": "🚙" },
+    { "id": "5", "type": "Van", "price": "$35", "eta": "15 min", "image": "🚐" }
+  ]
+  
